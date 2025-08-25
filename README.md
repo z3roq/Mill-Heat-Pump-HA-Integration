@@ -1,7 +1,7 @@
 Very primitive integration for Mill heat pump to Home Assistant.
 Because heat pump cannot be directly controlled via API, this is workaround that controls the room, not heat pump directly. 
 
-You loose ability to control pump from remote control after adding it to room. 
+You loose ability to control pump from remote control after adding it to room. Also you need to choose from app if You want to heat or cool. Currently only implemented for heating purposes, but cooling is on TODO list (maybe closer to summer lol).
 
 Instructions:
 
