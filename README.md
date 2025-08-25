@@ -9,6 +9,6 @@ Instructions:
 
 2. Copy custom_components content to your corresponding folder in HA
 
-3. Go to Settings > Devices & services > Add integration and provide login credentials to Mill Norway App.
+3. Go to Settings > Devices & services > Add integration > Mill HeatPump and provide login credentials to Mill Norway App.
 
 4. There should be now a climate entity named after room name in app.
