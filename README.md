@@ -11,7 +11,7 @@ Instructions:
 
 3. Go to Settings > Devices & services > Add integration > Mill HeatPump and provide login credentials to Mill Norway App.
 
-4. There should be now a climate entity named after room name in app.
+4. There should be now a climate entity named after room name in Home Assistant.
 
 Note:
 I am nowhere near of even basic developer and this was done heavely relied on AI, so there could be issues whit this. 
