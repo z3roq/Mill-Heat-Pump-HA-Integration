@@ -15,3 +15,9 @@ Instructions:
 
 Note:
 I am nowhere near of even basic developer and this was done heavely relied on AI, so there could be issues whit this. 
+
+TODO:
+- HACS installation
+- Check cooling stuff
+- Comment code
+- Make rooms as devices, not only entities
