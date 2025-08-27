@@ -14,7 +14,7 @@ Instructions:
 4. There should be now a climate entity named after room name in Home Assistant.
 
 Note:
-I am nowhere near of even basic developer and this was done heavely relied on AI, so there could be issues whit this. 
+I am nowhere near of even basic developer, so there could be issues whit this. 
 
 TODO:
 - HACS installation
