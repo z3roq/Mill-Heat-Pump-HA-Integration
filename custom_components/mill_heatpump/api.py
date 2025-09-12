@@ -2,8 +2,9 @@ import time
 import requests
 import logging
 
-_LOGGER = logging.getLogger(__name__)
 BASE_URL = "https://api.millnorwaycloud.com"
+TOKEN_REFRESH_TIME = 540
+
 
 class MillAPI:
     def __init__(self, email, password, access_token=None, refresh_token=None, token_expires=None):
@@ -23,7 +24,7 @@ class MillAPI:
         data = resp.json()
         self.access_token = data.get("idToken")
         self.refresh_token = data.get("refreshToken")
-        self.token_expires = time.time() + 600  # 10 minutes
+        self.token_expires = time.time() + TOKEN_REFRESH_TIME
         if not self.access_token:
             raise Exception("No idToken in response")
         return self.access_token
@@ -36,7 +37,7 @@ class MillAPI:
         resp.raise_for_status()
         data = resp.json()
         self.access_token = data.get("idToken")
-        self.token_expires = time.time() + 600
+        self.token_expires = time.time() + TOKEN_REFRESH_TIME
         return self.access_token
 
     def get_access_token(self):
@@ -79,7 +80,6 @@ class MillAPI:
         resp.raise_for_status()
         data = resp.json()
         rooms = data.get("rooms", [])
-        _LOGGER.warning("Rooms for house %s: %s", house_id, rooms)
         return data.get("rooms", [])
 
     def set_room_temperature(self, room_id, temperature):
